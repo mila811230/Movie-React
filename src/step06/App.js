@@ -15,6 +15,7 @@ function App() {
     <Navigation/>
       <Routes>
         <Route path = '/' element = {<Home/>}/>
+        <Route path="/Movie-React" element={<Home/>}/>  
         <Route path = '/about' element = {<About/>}/>
         <Route path = '/detail' element = {<Detail/>}/>
       </Routes>

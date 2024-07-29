@@ -14,7 +14,7 @@ import { Movie } from '../components/Movie'
 
 export function Home() {
   //상태변수를 설정
-  const [isLoading, setIsyLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
   const [loadCounter, setLoadCounter] = useState(0)
   const [movies, setMovies] = useState(null)
 
@@ -23,7 +23,7 @@ export function Home() {
     const response = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort_by=rating')
     console.log(response.data.data.movies)   
     setMovies(response.data.data.movies)
-    setIsyLoading(false)  
+    setIsLoading(false)  
   }
   useEffect(
     ()=>{     
@@ -40,17 +40,17 @@ function displayMovies(){
         <h1>Movie List(Home)</h1>
         <ul className='movies'>
           {
-            movies.map(item =>{
+            movies.map(item => {
               return (
                 <Movie 
-                key = {item.id}
-                id = {item.id}
-                year = {item.year}
-                title = {item.title}
-                summary = {item.summary}
-                poster = {item.medium_cover_image}
-                genres = {item.genres}
-                />
+                  key = {item.id}
+                  id = {item.id}
+                  year = {item.year}
+                  title = {item.title}
+                  summary = {item.summary}
+                  poster = {item.medium_cover_image}
+                  genres = {item.genres}
+                  />
          
               ) 
             })

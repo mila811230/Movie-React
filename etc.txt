@@ -1,0 +1,9 @@
+data.data.movie
+genres
+title
+year
+rating
+id
+background_image
+medium_cover_image
+description_full
